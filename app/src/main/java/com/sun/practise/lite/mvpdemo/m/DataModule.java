@@ -28,9 +28,9 @@ public class DataModule {
 
     //模拟数据处理
     public void getdata() {
-        Observable.create(new ObservableOnSubscribe() {
+        Observable.create(new ObservableOnSubscribe<List<String>>() {
             @Override
-            public void subscribe(@NonNull ObservableEmitter e) throws Exception {
+            public void subscribe(@NonNull ObservableEmitter<List<String>> e) throws Exception {
                 for (int i = 0; i <100; i++) {
                     data.add(i + "items");
                 }
@@ -38,21 +38,22 @@ public class DataModule {
             }
         }).subscribeOn(Schedulers.io())
                 .subscribeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer() {
+                .subscribe(new Observer<List<String>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
+
                     }
 
                     @Override
-                    public void onNext(Object o) {
-                        //处理完之后回调 ModuleInterface，通知P：数据处理完毕可以继续执行逻辑
-                        mCallback.LoadSuccess(data);
+                    public void onNext(List<String> strings) {
+                        mCallback.LoadSuccess(strings);
                     }
+
                     @Override
                     public void onError(Throwable e) {
-                        //数据获取失败
-                       mCallback.LoadFailed();
+                         mCallback.LoadFailed();
                     }
+
                     @Override
                     public void onComplete() {
 
