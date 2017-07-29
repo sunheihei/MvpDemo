@@ -37,7 +37,7 @@ public class DataModule {
                 e.onNext(data);
             }
         }).subscribeOn(Schedulers.io())
-                .subscribeOn(AndroidSchedulers.mainThread())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<String>>() {
                     @Override
                     public void onSubscribe(Disposable d) {
