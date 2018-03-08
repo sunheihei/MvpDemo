@@ -1,4 +1,4 @@
-package com.sun.practise.lite.mvpdemo.v;
+package com.sun.practise.lite.mvpdemo.MvpDemo.v;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.sun.practise.lite.mvpdemo.R;
-import com.sun.practise.lite.mvpdemo.p.MvpPresenter;
+import com.sun.practise.lite.mvpdemo.MvpDemo.p.MvpPresenter;
 
 import java.util.List;
 

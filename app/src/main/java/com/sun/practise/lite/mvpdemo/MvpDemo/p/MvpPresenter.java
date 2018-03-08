@@ -1,7 +1,7 @@
-package com.sun.practise.lite.mvpdemo.p;
-import com.sun.practise.lite.mvpdemo.m.DataModule;
-import com.sun.practise.lite.mvpdemo.m.ModuleInterface;
-import com.sun.practise.lite.mvpdemo.v.MvpView;
+package com.sun.practise.lite.mvpdemo.MvpDemo.p;
+import com.sun.practise.lite.mvpdemo.MvpDemo.m.DataModule;
+import com.sun.practise.lite.mvpdemo.MvpDemo.m.ModuleInterface;
+import com.sun.practise.lite.mvpdemo.MvpDemo.v.MvpView;
 import java.util.List;
 
 /**

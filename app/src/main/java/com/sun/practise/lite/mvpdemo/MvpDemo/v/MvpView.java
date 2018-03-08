@@ -1,4 +1,4 @@
-package com.sun.practise.lite.mvpdemo.v;
+package com.sun.practise.lite.mvpdemo.MvpDemo.v;
 
 import java.util.List;
 
